@@ -1,0 +1,136 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#101112">
+    <meta name="description" content="Zai News — berita terbaru Indonesia dalam satu tempat.">
+    <title>Zai News — Berita Terkini</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- LOADING -->
+    <div class="loader" id="loader">
+        <h1>ZAI<span>NEWS.</span></h1>
+        <div class="loader-spinner"></div>
+        <p>Informasi terkini.</p>
+    </div>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="navbar-container">
+            <a href="#" class="logo">ZAI<span>NEWS.</span></a>
+
+            <nav class="nav-links">
+                <a href="#home" class="active">Beranda</a>
+                <a href="#berita">Berita</a>
+                <a href="#kategori">Kategori</a>
+            </nav>
+
+            <label class="search-box">
+                <span aria-hidden="true">⌕</span>
+                <input
+                    type="search"
+                    id="searchInput"
+                    placeholder="Cari berita..."
+                    aria-label="Cari berita"
+                >
+            </label>
+        </div>
+    </header>
+
+    <main class="container" id="home">
+
+        <!-- INTRO -->
+        <section class="welcome">
+            <div>
+                <p class="eyebrow">INFORMASI HARI INI</p>
+                <h1>Berita terbaru.<br><span>Tanpa basa-basi.</span></h1>
+                <p class="welcome-description">
+                    Ikuti perkembangan Indonesia dan dunia dalam satu halaman.
+                </p>
+            </div>
+            <div class="welcome-date" id="currentDate"></div>
+        </section>
+
+        <!-- BREAKING NEWS -->
+        <section class="breaking-news" aria-label="Berita terbaru">
+            <span class="breaking-label">TERKINI</span>
+            <div class="ticker-window">
+                <div class="ticker-track" id="tickerTrack">
+                    Memuat berita terbaru...
+                </div>
+            </div>
+        </section>
+
+        <!-- CATEGORIES -->
+        <section id="kategori" class="category-section">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">JELAJAHI</p>
+                    <h2>Pilih kategori</h2>
+                </div>
+            </div>
+
+            <div class="categories" id="categoryButtons">
+                <button class="category-btn active" data-category="Semua">
+                    Semua berita
+                </button>
+                <button class="category-btn" data-category="Politik">
+                    Politik
+                </button>
+                <button class="category-btn" data-category="Ekonomi">
+                    Ekonomi
+                </button>
+                <button class="category-btn" data-category="Teknologi">
+                    Teknologi
+                </button>
+                <button class="category-btn" data-category="Olahraga">
+                    Olahraga
+                </button>
+                <button class="category-btn" data-category="Hiburan">
+                    Hiburan
+                </button>
+            </div>
+        </section>
+
+        <!-- NEWS -->
+        <section id="berita" class="news-section">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">UPDATE TERBARU</p>
+                    <h2>Berita hari ini<span class="heading-dot">.</span></h2>
+                </div>
+                <span class="news-count" id="newsCount">Memuat berita...</span>
+            </div>
+
+            <div class="news-grid" id="newsGrid">
+                <div class="skeleton"></div>
+                <div class="skeleton"></div>
+                <div class="skeleton"></div>
+            </div>
+
+            <button class="load-more" id="loadMore">
+                Muat berita lainnya <span>↓</span>
+            </button>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <a href="#home" class="footer-logo">ZAI<span>NEWS.</span></a>
+        <p>Berita terkini, informasi berarti.</p>
+        <p class="copyright">
+            © <span id="currentYear"></span> Zai News. Dibuat untuk pembaca.
+        </p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
